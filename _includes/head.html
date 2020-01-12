@@ -1,0 +1,28 @@
+<!-- Holds all the stuff that goes in the head tag, the stuff that defines character sets, stylesheets,
+and all that other jazz. Doesn't appear on the page, but is essential for search, linking, and tab titling. -->
+<head>
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="{{ site.description }}">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:description" content="{{ site.description }}">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="pavelkomarov.github.io/" >
+	<meta property="og:site_name" content="Pavel's Site">
+	<meta property="og:image" content="/theme/favicon.png">
+
+	<link rel="icon" type="image/png" href="/theme/favicon.png">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
+	<!-- Bootstrap 4.3.1 css and my custom theme's css -->
+	<link rel="stylesheet" href="../theme/bootstrap.min.css">
+	<link rel="stylesheet" href="../theme/agency.css">
+
+	<!-- Custom Fonts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>

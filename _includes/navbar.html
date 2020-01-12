@@ -1,0 +1,26 @@
+<!-- Navigation: expand-[sm, md, lg] controls the width where the menu collapses. -->
+<nav class="navbar navbar-expand-lg fixed-top">
+	<div class="container"><!-- keep in container so buttons have appropriate margins -->
+		<ul class="list-inline social-buttons">
+			{% for link in site.social %}
+			<li class="list-inline-item">
+				<a href="{{ link.url }}"><i class="{{ link.icon }}"></i></a>
+			</li>
+			{% endfor %}
+		</ul>
+
+		<div class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+			&#9776;<!-- three bars symbol -->
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="menu">
+			<ul class="nav ml-auto justify-content-end">
+				<a class="nav-link page-scroll" href="#about">About</a>
+				<a class="nav-link page-scroll" href="#projects">Projects</a>
+				<a class="nav-link page-scroll" href="#writing">Writing</a>
+				<!--a class="nav-link page-scroll" href="#contact">Contact</a-->
+			</ul>
+		</div>
+	</div>
+</nav>

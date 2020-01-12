@@ -1,0 +1,429 @@
+/* This file overrides the default formatting of some Bootstrap objects and defines
+ * a few new things for use with this theme (originally called "agency", adapted in
+ * to "event", and now mine).
+ */
+
+/* major elements */
+html {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	position: absolute;
+	margin: 0;
+	padding-top: 90px;
+	min-height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #{{site.color.muted}};
+}
+
+/* sections */
+section {
+	padding: 30px 30px;
+}
+
+section h2.section-heading {
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-size: 40px;
+}
+
+section h3.section-subheading {
+	margin-bottom: 75px;
+	text-transform: none;
+	font-family: {{site.font.serif}};
+	font-size: 120%;
+	font-style: italic;
+	font-weight: 400;
+}
+
+blockquote {
+	margin: 30px;
+}
+
+p {
+	line-height: 1.5;
+	font-size: 110%;
+}
+
+a {
+	outline: 0;
+	color: #{{site.color.primary}};
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #{{site.color.secondary}};
+	text-decoration: none; /* no underlining links */
+}
+
+a.anchor {
+	display: block;
+	position: relative;
+	top: -49px;
+	visibility: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: {{site.font.sans}};
+	font-weight: 700; /* 700 is standard bold */
+	color: #{{site.color.secondary-dark}}
+}
+
+
+/* navbar */
+.navbar-toggler {
+	transition: all .3s;
+	color: #fff;
+	background-color: #{{site.color.primary}};
+}
+
+.navbar-toggler:hover{
+	background-color: #{{site.color.secondary}};
+}
+
+.nav>a:focus { /* > means direct descendent, as opposed to a space, which is any descendent */
+	color: #fff; /* override the default links in focus being colored thing */
+}
+
+.nav>a:hover { /* override the override in the case of hovering a focused link */
+	color: #{{site.color.primary}};
+}
+
+.nav>a.active {
+    border-radius: 3px;
+    color: #fff;
+    background-color: #{{site.color.primary}};
+}
+
+.nav>a.active:hover {
+    background-color: #{{site.color.secondary}};
+}
+
+.page-scroll { /* the buttons in the navbar */
+	transition: all .3s;
+	border-radius: 3px;
+	margin-left: 20px;
+	padding: 0.2rem 0.6rem;
+	background-color: transparent;
+	text-transform: uppercase;
+	font-family: {{site.font.sans}};
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #fff;
+}
+
+@media(max-width: 768px) {
+	.page-scroll {
+		margin-left: 10px;
+		font-size: 12px;
+	}
+}
+
+.social-buttons {
+	margin-bottom: 0px;
+}
+
+.social-buttons li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	color: #fff;
+	transition: all .3s;
+	background-color: #{{site.color.secondary-dark}};
+}
+
+ul.social-buttons li a:hover {
+	background-color: #{{site.color.primary}};
+}
+
+@media(max-width: 768px) {
+	ul.social-buttons li a {
+		width: 35px;
+		height: 35px;
+		font-size: 18px;
+		margin-right: -7px;
+	}
+}
+
+
+/* welcome screen */
+.welcome {
+	height: 100vh; /* This section is adaptively exactly one screenheight tall. Pretty slick. */
+	background: lightgray; /* So if everything but the image loads a visitor can still see something */
+	background-attachment: fixed, fixed; /* alternatively this can "scroll" with the page" */
+	background-image: url('purple_stars.jpg'), url('purple_stars_light.jpg');
+	background-position: center center, center center;
+	background-size: cover, cover;
+	text-align: center;
+	padding: 35vh 0; /* for vertical centering */
+	color: #fff; /* text color */
+}
+
+.welcome .intro-heading {
+	text-transform: uppercase;
+	font-family: {{site.font.sans}};
+	font-size: 75px;
+	font-weight: 700;
+	line-height: 75px;
+	margin-bottom: 25px;
+}
+
+.welcome .intro-lead-in {
+	font-family: {{site.font.serif}};
+	font-size: 40px;
+	font-style: italic;
+	line-height: 40px;
+}
+
+
+@media(max-width:768px) {
+	.welcome .intro-heading {
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.welcome .intro-lead-in {
+		font-size: 22px;
+		line-height: 22px;
+	}
+}
+
+
+/* galleries */
+.gallery-thumbnail {
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	padding-bottom: 100%;
+	background: #{{site.color.primary}};
+}
+
+.gallery-thumbnail i {
+	position: absolute;
+	font-size: 300%;
+	color: #fff;
+}
+
+.gallery-thumbnail img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* crops center out of image */
+	transition: all ease .5s;
+}
+
+.gallery-thumbnail img:hover {
+	opacity: 0;
+	transition: all ease .5s;
+}
+
+.gallery-caption {
+	padding-top: 15px;
+	min-height: 80px;
+	text-align: center;
+	background-color: #fff;
+}
+
+.gallery-caption h4 {
+	margin: 0;
+}
+
+
+
+/* contact form */
+section#contact {
+	background-color: #222;
+	background-image: url('map-image.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+section#contact .section-heading {
+	color: #fff;
+}
+
+section#contact .form-group {
+	margin-bottom: 25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+	padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+	height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+	height: 236px;
+}
+
+section#contact .form-control:focus {
+	border-color: #{{site.color.primary}};
+	box-shadow: none;
+}
+
+section#contact::-webkit-input-placeholder {
+	text-transform: uppercase;
+	font-family: {{site.font.sans}};
+	font-weight: 700;
+	color: #bbb;
+}
+
+section#contact:-moz-placeholder {
+	text-transform: uppercase;
+	font-family: {{site.font.sans}};
+	font-weight: 700;
+	color: #bbb;
+}
+
+section#contact::-moz-placeholder {
+	text-transform: uppercase;
+	font-family: {{site.font.sans}};
+	font-weight: 700;
+	color: #bbb;
+}
+
+section#contact:-ms-input-placeholder {
+	text-transform: uppercase;
+	font-family: {{site.font.sans}};
+	font-weight: 700;
+	color: #bbb;
+}
+
+section#contact .text-danger {
+	color: #e74c3c;
+}
+
+
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+	outline: 0;
+}
+
+.portfolio-modal .modal-content {
+	padding: 100px 0;
+	min-height: 100%;
+	border: 0;
+	border-radius: 0;
+	background-clip: border-box;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+	margin-bottom: 15px;
+	font-size: 140%;
+}
+
+.portfolio-modal .modal-content p {
+	margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+	margin: 20px 0 30px;
+	font-family: {{site.font.serif}};
+	font-size: 100%;
+	font-style: italic;
+}
+
+.portfolio-modal .modal-content {
+	margin-top: 0;
+}
+
+.portfolio-modal .modal-content img {
+	margin-bottom: 30px;
+}
+
+.portfolio-modal .close-modal {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 75px;
+	height: 75px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+	opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+	z-index: 1051;
+	width: 1px;
+	height: 75px;
+	margin-left: 35px;
+	background-color: #222;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+	z-index: 1052;
+	width: 1px;
+	height: 75px;
+	background-color: #222;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+
+
+/* stuff I'm not sure I need */
+/* buttons */
+.btn-xl {
+	padding: 20px 40px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.btn-sm {
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.btn-sm, .btn-xl {
+	color: #fff;
+	background-color: #{{site.color.primary}};
+	border: none;
+	text-transform: uppercase;
+	font-family: {{site.font.sans}};
+}
+
+.btn-sm:hover,
+.btn-sm:focus,
+.btn-sm:active,
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.open .dropdown-toggle.btn-xl {
+	border-color: #{{site.color.primary}};
+	color: #fff;
+	background-color: #{{site.color.secondary}};
+}
