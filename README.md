@@ -1,3 +1,5 @@
+I've chosen to name this repo after the evil character in the Robert Louis Stevenson story, because don't let Jekyll fool you: It's evil. The special cases and bullshit are ridiculous, and the documentation is way too long yet never tells you what you need to know. It's also a pun, because this repo represents my effort to "hide" away some of my site's complexity somewhere separate.
+
 
 ### Order of operations for Jekyll
 
