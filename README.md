@@ -1,7 +1,7 @@
 I've chosen to name this repo after the evil character in the Robert Louis Stevenson story, because don't let Jekyll fool you: It's evil. The special cases and bullshit are ridiculous, and the documentation is way too long yet never tells you what you need to know. It's also a pun, because this repo represents my effort to "hide" away some of my site's complexity somewhere separate.
 
 
-### Order of operations for Jekyll
+### [Order of operations for Jekyll](https://jekyllrb.com/tutorials/orderofinterpretation/)
 
 Jekyll converts your site in the following order:
 
@@ -25,6 +25,13 @@ Using github pages with Jekyll is an absurdly fragile black box. The server pull
 3. ONLY files in `assets`, `_includes`, `_layouts`, and `_sass` end up in the theme. Folders named other things can be included in a compiled gem version, but that requires tweaks to the `.gemspec`. Not sure whether `remote_theme` is smart enough to read the `.gemspec` and figure out that it should be preserving other files. "When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled. To add a custom directory to your theme-gem, please edit the regexp in `____.gemspec` accordingly." -default README that comes with `jekyll new-theme ____`.
 4. Jekyll outputs pages by default at `/name/index.html`, which is objectively atrocious. `permalink: /name.html` in the "front matter" to avoid this behavior.
 5. Navigating down to the `_site` folder and opening the htmls causes all the relative paths to break, so the pages don't look right. Instead go to `localhost:4000/page.html`.
+6. The `/_layouts` directory can be used to house `html` files peppered with Jekyll's liquid tags which can then be referenced in commonly-structured pages with calls in the "front matter":
+
+```
+---
+layout: home
+---
+```
 
 
 
