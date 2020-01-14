@@ -1,14 +1,5 @@
 # Site data below, because I don't want a whole /_data/template.yml file to access only these few things.
 # Variables defined here are accessible via {{ site.color.secondary }}, for example.
 
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary: 3cb371
-  secondary: 6ecf99
-  secondary-dark: 00283c
-  muted: 555
+# This doesn't work for the theme right now, because github pages isn't yet at Jekyll 4.0.0
 
-# Font Families
-font:
-  sans: 'Helvetica,Montserrat,Arial'
-  serif: 'Caslon,Georgia,Sabon,Garamond'

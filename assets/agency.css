@@ -1,5 +1,3 @@
----
----
 /* This file overrides the default formatting of some Bootstrap objects and defines
  * a few new things for use with this theme (originally called "agency", adapted in
  * to "event", and now mine).
@@ -23,7 +21,7 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 	font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #{{site.color.muted}};
+	color: #555;
 }
 
 /* sections */
@@ -41,7 +39,7 @@ section h2.section-heading {
 section h3.section-subheading {
 	margin-bottom: 75px;
 	text-transform: none;
-	font-family: {{site.font.serif}};
+	font-family: 'Caslon,Georgia,Sabon,Garamond';
 	font-size: 120%;
 	font-style: italic;
 	font-weight: 400;
@@ -58,13 +56,13 @@ p {
 
 a {
 	outline: 0;
-	color: #{{site.color.primary}};
+	color: #3cb371;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #{{site.color.secondary}};
+	color: #6ecf99;
 	text-decoration: none; /* no underlining links */
 }
 
@@ -81,9 +79,9 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: {{site.font.sans}};
+	font-family: 'Helvetica,Montserrat,Arial';
 	font-weight: 700; /* 700 is standard bold */
-	color: #{{site.color.secondary-dark}}
+	color: #00283c
 }
 
 
@@ -91,11 +89,11 @@ h6 {
 .navbar-toggler {
 	transition: all .3s;
 	color: #fff;
-	background-color: #{{site.color.primary}};
+	background-color: #3cb371;
 }
 
 .navbar-toggler:hover{
-	background-color: #{{site.color.secondary}};
+	background-color: #6ecf99;
 }
 
 .nav>a:focus { /* > means direct descendent, as opposed to a space, which is any descendent */
@@ -103,17 +101,17 @@ h6 {
 }
 
 .nav>a:hover { /* override the override in the case of hovering a focused link */
-	color: #{{site.color.primary}};
+	color: #3cb371;
 }
 
 .nav>a.active {
     border-radius: 3px;
     color: #fff;
-    background-color: #{{site.color.primary}};
+    background-color: #3cb371;
 }
 
 .nav>a.active:hover {
-    background-color: #{{site.color.secondary}};
+    background-color: #6ecf99;
 }
 
 .page-scroll { /* the buttons in the navbar */
@@ -123,7 +121,7 @@ h6 {
 	padding: 0.2rem 0.6rem;
 	background-color: transparent;
 	text-transform: uppercase;
-	font-family: {{site.font.sans}};
+	font-family: 'Helvetica,Montserrat,Arial';
 	font-weight: bold;
 	letter-spacing: 1px;
 	color: #fff;
@@ -150,11 +148,11 @@ h6 {
 	border-radius: 100%;
 	color: #fff;
 	transition: all .3s;
-	background-color: #{{site.color.secondary-dark}};
+	background-color: #00283c;
 }
 
 ul.social-buttons li a:hover {
-	background-color: #{{site.color.primary}};
+	background-color: #3cb371;
 }
 
 @media(max-width: 768px) {
@@ -182,7 +180,7 @@ ul.social-buttons li a:hover {
 
 .welcome .intro-heading {
 	text-transform: uppercase;
-	font-family: {{site.font.sans}};
+	font-family: 'Helvetica,Montserrat,Arial';
 	font-size: 75px;
 	font-weight: 700;
 	line-height: 75px;
@@ -190,7 +188,7 @@ ul.social-buttons li a:hover {
 }
 
 .welcome .intro-lead-in {
-	font-family: {{site.font.serif}};
+	font-family: 'Caslon,Georgia,Sabon,Garamond';
 	font-size: 40px;
 	font-style: italic;
 	line-height: 40px;
@@ -216,7 +214,7 @@ ul.social-buttons li a:hover {
 	margin-top: 20px;
 	width: 100%;
 	padding-bottom: 100%;
-	background: #{{site.color.primary}};
+	background: #3cb371;
 }
 
 .gallery-thumbnail i {
@@ -281,36 +279,8 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-	border-color: #{{site.color.primary}};
+	border-color: #3cb371;
 	box-shadow: none;
-}
-
-section#contact::-webkit-input-placeholder {
-	text-transform: uppercase;
-	font-family: {{site.font.sans}};
-	font-weight: 700;
-	color: #bbb;
-}
-
-section#contact:-moz-placeholder {
-	text-transform: uppercase;
-	font-family: {{site.font.sans}};
-	font-weight: 700;
-	color: #bbb;
-}
-
-section#contact::-moz-placeholder {
-	text-transform: uppercase;
-	font-family: {{site.font.sans}};
-	font-weight: 700;
-	color: #bbb;
-}
-
-section#contact:-ms-input-placeholder {
-	text-transform: uppercase;
-	font-family: {{site.font.sans}};
-	font-weight: 700;
-	color: #bbb;
 }
 
 section#contact .text-danger {
@@ -346,7 +316,7 @@ section#contact .text-danger {
 
 .portfolio-modal .modal-content p.item-intro {
 	margin: 20px 0 30px;
-	font-family: {{site.font.serif}};
+	font-family: 'Caslon,Georgia,Sabon,Garamond';
 	font-size: 100%;
 	font-style: italic;
 }
@@ -412,10 +382,10 @@ section#contact .text-danger {
 
 .btn-sm, .btn-xl {
 	color: #fff;
-	background-color: #{{site.color.primary}};
+	background-color: #3cb371;
 	border: none;
 	text-transform: uppercase;
-	font-family: {{site.font.sans}};
+	font-family: 'Helvetica,Montserrat,Arial';
 }
 
 .btn-sm:hover,
@@ -425,7 +395,7 @@ section#contact .text-danger {
 .btn-xl:focus,
 .btn-xl:active,
 .open .dropdown-toggle.btn-xl {
-	border-color: #{{site.color.primary}};
+	border-color: #3cb371;
 	color: #fff;
-	background-color: #{{site.color.secondary}};
+	background-color: #6ecf99;
 }

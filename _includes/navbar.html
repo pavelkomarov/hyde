@@ -2,11 +2,33 @@
 <nav class="navbar navbar-expand-lg fixed-top">
 	<div class="container"><!-- keep in container so buttons have appropriate margins -->
 		<ul class="list-inline social-buttons">
-			{% for link in site.social %}
+			<!-- this should be looped with liquid tags, but github isn't on jekyll 4.0.0 yet,
+				so I can't use variables from a .yml file. Look back in commit history to 2019
+				for example of how to revert once github eventually updates. -->
 			<li class="list-inline-item">
-				<a href="{{ link.url }}"><i class="{{ link.icon }}"></i></a>
-			</li>
-			{% endfor %}
+				<a href="https://www.facebook.com/hewhoiscalledpavel">
+					<i class="fab fa-facebook"></i></a></li>
+			<li class="list-inline-item">
+				<a href="https://github.com/pavelkomarov">
+					<i class="fab fa-github"></i></a></li>
+			<li class="list-inline-item">
+				<a href="https://linkedin.com/pub/pavel-komarov/48/340/a28">
+					<i class="fab fa-linkedin"></i></a></li>
+			<li class="list-inline-item">
+				<a href="https://www.instagram.com/swamp_elf/">
+					<i class="fab fa-instagram"></i></a></li>
+			<li class="list-inline-item">
+				<a href="https://stackoverflow.com/users/story/2084503">
+					<i class="fab fa-stack-overflow"></i></a></li>
+			<li class="list-inline-item">
+				<a href="mailto:pvlkmrv@gmail.com">
+					<i class="fa fa-envelope"></i></a></li>
+			<li class="list-inline-item">
+				<a href="https://pavelkomarov.com/assets/Resume%20abridged%202019-9-18.pdf">
+					<i class="fa fa-file"></i></a></li>
+			<li class="list-inline-item">
+				<a href="https://flipboard.com/@pavel_komarov/pavel%27s-favorites-78tpvu6pz">
+					<i class="fab fa-flipboard"></i></a></li>
 		</ul>
 
 		<div class="navbar-toggler" data-toggle="collapse" data-target="#menu">
@@ -15,12 +37,12 @@
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="menu">
-			<ul class="nav ml-auto justify-content-end">
+			<div class="nav ml-auto justify-content-end">
 				<a class="nav-link page-scroll" href="#about">About</a>
 				<a class="nav-link page-scroll" href="#projects">Projects</a>
 				<a class="nav-link page-scroll" href="#writing">Writing</a>
 				<!--a class="nav-link page-scroll" href="#contact">Contact</a-->
-			</ul>
+			</div>
 		</div>
 	</div>
 </nav>
