@@ -20,7 +20,7 @@ body {
 	min-height: 100%;
 	width: 100%;
 	overflow-x: hidden;
-	font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #555;
 }
 
@@ -39,7 +39,7 @@ section h2.section-heading {
 section h3.section-subheading {
 	margin-bottom: 75px;
 	text-transform: none;
-	font-family: 'Caslon,Georgia,Sabon,Garamond';
+	font-family: Caslon, Georgia, Sabon, Garamond, serif;
 	font-size: 120%;
 	font-style: italic;
 	font-weight: 400;
@@ -79,7 +79,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Helvetica,Montserrat,Arial';
+	font-family: Helvetica, Montserrat, Arial, sans-serif;
 	font-weight: 700; /* 700 is standard bold */
 	color: #00283c
 }
@@ -121,7 +121,7 @@ h6 {
 	padding: 0.2rem 0.6rem;
 	background-color: transparent;
 	text-transform: uppercase;
-	font-family: 'Helvetica,Montserrat,Arial';
+	font-family: Helvetica, Montserrat, Arial, sans-serif;
 	font-weight: bold;
 	letter-spacing: 1px;
 	color: #fff;
@@ -180,7 +180,7 @@ ul.social-buttons li a:hover {
 
 .welcome .intro-heading {
 	text-transform: uppercase;
-	font-family: 'Helvetica,Montserrat,Arial';
+	font-family: Helvetica, Montserrat, Arial, sans-serif;
 	font-size: 75px;
 	font-weight: 700;
 	line-height: 75px;
@@ -188,7 +188,7 @@ ul.social-buttons li a:hover {
 }
 
 .welcome .intro-lead-in {
-	font-family: 'Caslon,Georgia,Sabon,Garamond';
+	font-family: Caslon,Georgia,Sabon,Garamond;
 	font-size: 40px;
 	font-style: italic;
 	line-height: 40px;
@@ -316,7 +316,7 @@ section#contact .text-danger {
 
 .portfolio-modal .modal-content p.item-intro {
 	margin: 20px 0 30px;
-	font-family: 'Caslon,Georgia,Sabon,Garamond';
+	font-family: Caslon, Georgia, Sabon, Garamond, serif;
 	font-size: 100%;
 	font-style: italic;
 }
@@ -385,7 +385,7 @@ section#contact .text-danger {
 	background-color: #3cb371;
 	border: none;
 	text-transform: uppercase;
-	font-family: 'Helvetica,Montserrat,Arial';
+	font-family: Helvetica, Montserrat, Arial, sans-serif;
 }
 
 .btn-sm:hover,
