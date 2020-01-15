@@ -166,7 +166,7 @@ ul.social-buttons li a:hover {
 	height: 100vh; /* This section is adaptively exactly one screenheight tall. Pretty slick. */
 	background: lightgray; /* So if everything but the image loads a visitor can still see something */
 	background-attachment: fixed, fixed; /* alternatively this can "scroll" with the page" */
-	background-image: url('purple_stars.jpg'), url('purple_stars_light.jpg');
+	background-image: url('background.jpg'), url('background_light.jpg');
 	background-position: center center, center center;
 	background-size: cover, cover;
 	text-align: center;
