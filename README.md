@@ -1,5 +1,10 @@
 I've chosen to name this repo after the evil character in the Robert Louis Stevenson story, because don't let Jekyll fool you: It's evil. The special cases and bullshit are ridiculous, and the documentation is way too long yet never tells you what you need to know. It's also a pun, because this repo represents my effort to "hide" away some of my site's complexity somewhere separate.
 
+### Repo Structure
+- `assets` contains theme-specific common files, like favicon, background images, css, javascript, things that need to be acessible directly.
+- `_includes` contains pieces of html and markdown that can be reused throughout the site, like the navbar.
+- `_layouts` contains overarching structures to be used by pages. These make use of components from `_includes`.
+- `_config.yml` is supposed to govern Jekyll. In version 4.0.0 (not yet used by GitHub Pages), content from this file will be combined with the `_config` from any theme-using site (which lives in its own repo).
 
 ### [Order of operations for Jekyll](https://jekyllrb.com/tutorials/orderofinterpretation/)
 
