@@ -89,11 +89,10 @@ h6 {
 .navbar-toggler {
 	transition: all .3s;
 	color: #fff;
-	background-color: #3cb371;
 }
 
 .navbar-toggler:hover{
-	background-color: #6ecf99;
+	color: #3cb371;
 }
 
 .nav>a:focus { /* > means direct descendent, as opposed to a space, which is any descendent */
@@ -116,7 +115,6 @@ h6 {
 
 .page-scroll { /* the buttons in the navbar */
 	transition: all .3s;
-	border-radius: 3px;
 	margin-left: 20px;
 	padding: 0.2rem 0.6rem;
 	background-color: transparent;
@@ -143,8 +141,8 @@ h6 {
 	align-items: center; /* center vertically */
 	justify-content: center; /* center horizontally */
 	font-size: 20px;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	color: #fff;
 	transition: all .3s;
 }
@@ -155,8 +153,8 @@ ul.social-buttons li a:hover {
 
 @media(max-width: 768px) {
 	ul.social-buttons li a {
-		width: 35px;
-		height: 35px;
+		width: 25px;
+		height: 25px;
 		font-size: 18px;
 		margin-right: -7px;
 	}
