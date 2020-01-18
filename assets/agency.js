@@ -38,7 +38,7 @@ window.addEventListener('scroll', navbar_opacity);// avoid jQuery where easy
 window.addEventListener('load', navbar_opacity);
 
 // Closes the Responsive Menu on Menu Item Click
-document.getElementsId('menu').click(() => {
+document.getElementById('menu').click(() => {
 	console.log("clicked me");
 	document.getElementById('hamburger').click();
 });
