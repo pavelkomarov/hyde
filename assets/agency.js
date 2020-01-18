@@ -37,8 +37,12 @@ function navbar_opacity() {
 window.addEventListener('scroll', navbar_opacity);// avoid jQuery where easy
 window.addEventListener('load', navbar_opacity);
 
+console.log("yeah, it gets run");
+
 // Closes the Responsive Menu on Menu Item Click
-document.getElementById('menu').click(() => {
-	console.log("clicked me");
-	document.getElementById('hamburger').click();
-});
+for (let link of document.querySelectorAll('.navbar-collapse ul a')) {
+	link.click(() => {
+		console.log('clicked me');
+		document.getElementById('hamburger').click();
+	});
+}
