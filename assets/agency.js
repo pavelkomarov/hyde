@@ -3,7 +3,8 @@
 for (let link of document.querySelectorAll('a.page-scroll')) {
 	link.addEventListener('click', (event) => {
 		let where_to = event.target.href.split('#');
-		if (where_to[0] == window.location) { // then we're on the same page, so scroll smoothly
+		let where_is = window.location.href.split('#');
+		if (where_to[0] == where_is[0]) { // then we're on the same page, so scroll smoothly
 			event.preventDefault();
 			anchor = document.querySelector('#'+where_to[1]);
 			anchor.scrollIntoView({ behavior: 'smooth' }); // smooth, baby
@@ -23,7 +24,7 @@ function navbar_opacity() {
 	}
 	document.querySelector('nav').style.backgroundColor = 'rgba(34,34,34,'+opacity+')';
 }
-if (window.location.href.match('^https?://.*/(#.*)?$')) { // if on homepage
+if (window.location.href.match('^https?://[^/]+/(#.*)?$')) { // if on homepage
 	window.addEventListener('scroll', navbar_opacity);
 	//window.addEventListener('load', navbar_opacity);
 } else { // on not-homepages, navbar is never transparent
