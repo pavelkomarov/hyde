@@ -33,7 +33,10 @@ if (window.location.href.match('^https?://.*/(#.*)?$')) { // if on homepage
 // Closes the Responsive Menu on Menu Item Click
 for (let link of document.querySelectorAll('.navbar-collapse a')) {
 	link.addEventListener('click', () => {
-		document.getElementById('hamburger').click();
+		hamburger = document.getElementById('hamburger');
+		if (window.getComputedStyle(hamburger).display == 'block') { // only if collapsed
+			hamburger.click(); // because doing this if uncollapsed blinks the menu; I no like
+		}
 	});
 }
 
