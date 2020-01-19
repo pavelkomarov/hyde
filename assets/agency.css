@@ -113,7 +113,7 @@ h6 {
     background-color: #6ecf99;
 }
 
-.page-scroll { /* the buttons in the navbar */
+.nav-link { /* the buttons in the navbar */
 	transition: all .3s;
 	margin-left: 20px;
 	padding: 0.2rem 0.6rem;
@@ -126,7 +126,7 @@ h6 {
 }
 
 @media(max-width: 768px) {
-	.page-scroll {
+	.nav-link {
 		margin-left: 10px;
 		font-size: 12px;
 	}
