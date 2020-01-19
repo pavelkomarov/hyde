@@ -26,7 +26,7 @@ function navbar_opacity() {
 }
 if (window.location.href.match('^https?://[^/]+/(#.*)?$')) { // if on homepage
 	window.addEventListener('scroll', navbar_opacity);
-	//window.addEventListener('load', navbar_opacity);
+	window.addEventListener('load', navbar_opacity); // so proper transparency when linked back to #section
 } else { // on not-homepages, navbar is never transparent
 	document.querySelector('nav').style.backgroundColor = 'rgba(34,34,34,1)';
 }
