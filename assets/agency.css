@@ -395,3 +395,8 @@ section#contact .text-danger {
 	color: #fff;
 	background-color: #6ecf99;
 }
+
+.container img {
+	max-width: 100%;
+}
+

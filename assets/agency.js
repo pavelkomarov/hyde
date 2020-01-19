@@ -1,4 +1,14 @@
 
+// Smooth scrolling for page-scroll elements
+for (let link of document.querySelectorAll('a.page-scroll')) {
+	link.addEventListener('click', event => {
+		if (event.target.href.split('#')[0] == window.location.href.split('#')[0]) { // same page
+			event.preventDefault(); // so scroll smoothly instead
+			document.querySelector('#'+where_to[1]).scrollIntoView({ behavior: 'smooth' }); // smooth, baby
+		}
+	});
+}
+
 // A function to fade-in the navbar's background on the homepage
 // based on vertical location
 function navbar_opacity() {
@@ -24,19 +34,6 @@ for (let link of document.querySelectorAll('.navbar-collapse a')) {
 		hamburger = document.getElementById('hamburger');
 		if (window.getComputedStyle(hamburger).display == 'block') { // only if collapsed
 			hamburger.click(); // because doing this if uncollapsed blinks the menu; I no like
-		}
-	});
-}
-
-// Smooth scrolling for page-scroll elements
-for (let link of document.querySelectorAll('a.page-scroll')) {
-	link.addEventListener('click', event => {
-		let where_to = event.target.href.split('#');
-		let where_is = window.location.href.split('#');
-		if (where_to[0] == where_is[0]) { // then we're on the same page, so scroll smoothly
-			event.preventDefault();
-			anchor = document.querySelector('#'+where_to[1]);
-			anchor.scrollIntoView({ behavior: 'smooth' }); // smooth, baby
 		}
 	});
 }
