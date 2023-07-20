@@ -246,46 +246,6 @@ ul.social-buttons li a:hover {
 }
 
 
-
-/* contact form */
-section#contact {
-	background-color: #222;
-	background-image: url('map-image.png');
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-section#contact .section-heading {
-	color: #fff;
-}
-
-section#contact .form-group {
-	margin-bottom: 25px;
-}
-
-section#contact .form-group input,
-section#contact .form-group textarea {
-	padding: 20px;
-}
-
-section#contact .form-group input.form-control {
-	height: auto;
-}
-
-section#contact .form-group textarea.form-control {
-	height: 236px;
-}
-
-section#contact .form-control:focus {
-	border-color: #3cb371;
-	box-shadow: none;
-}
-
-section#contact .text-danger {
-	color: #e74c3c;
-}
-
-
 .btn:focus,
 .btn:active,
 .btn.active,
