@@ -49,6 +49,10 @@ blockquote {
 	margin: 30px;
 }
 
+code {
+	color: #3cb371;
+}
+
 p {
 	line-height: 1.5;
 	font-size: 110%;
