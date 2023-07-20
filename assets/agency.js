@@ -38,4 +38,3 @@ for (let link of document.querySelectorAll('.navbar-collapse a')) {
 		}
 	});
 }
-
