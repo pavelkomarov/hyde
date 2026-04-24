@@ -1,6 +1,6 @@
 /* This file overrides the default formatting of some Bootstrap objects and defines
- * a few new things for use with this theme (originally called "agency", adapted in
- * to "event", and now mine).
+ * a few new things for use with this theme (originally called "agency", adapted into
+ * "event", and now mine).
  */
 
 /* major elements */
@@ -24,25 +24,15 @@ body {
 	color: #555;
 }
 
-/* sections */
 section {
 	padding: 30px 30px;
-}
 
-section h2.section-heading {
-	text-transform: uppercase;
-	margin-top: 0;
-	margin-bottom: 15px;
-	font-size: 40px;
-}
-
-section h3.section-subheading {
-	margin-bottom: 75px;
-	text-transform: none;
-	font-family: Caslon, Georgia, Sabon, Garamond, serif;
-	font-size: 120%;
-	font-style: italic;
-	font-weight: 400;
+	& h2.section-heading {
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 15px;
+		font-size: 40px;
+	}
 }
 
 blockquote {
@@ -60,60 +50,39 @@ p {
 
 a {
 	color: #3cb371;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: #6ecf99;
+		text-decoration: none; /* no underlining links */
+	}
+
+	&.anchor {
+		display: block;
+		position: relative;
+		top: -46px;
+		visibility: hidden;
+	}
 }
 
-a:hover,
-a:focus,
-a:active {
-	color: #6ecf99;
-	text-decoration: none; /* no underlining links */
-}
-
-a.anchor {
-	display: block;
-	position: relative;
-	top: -46px;
-	visibility: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-family: Helvetica, Montserrat, Arial, sans-serif;
 	font-weight: 700; /* 700 is standard bold */
-	color: #00283c
+	color: #00283c;
 }
-
 
 /* navbar */
 .navbar-toggler {
 	transition: all .3s;
 	color: #fff;
+
+	&:hover { color: #3cb371; }
 }
 
-.navbar-toggler:hover{
-	color: #3cb371;
-}
-
-.nav>a:focus { /* > means direct descendent, as opposed to a space, which is any descendent */
-	color: #fff; /* override the default links in focus being colored thing */
-}
-
-.nav>a:hover { /* override the override in the case of hovering a focused link */
-	color: #3cb371;
-}
-
-.nav>a.active {
-    border-radius: 3px;
-    color: #fff;
-    background-color: #3cb371;
-}
-
-.nav>a.active:hover {
-    background-color: #6ecf99;
+.nav {
+	& > a:focus { color: #fff; } /* override default focus color */
+	& > a:hover { color: #3cb371; }
 }
 
 .nav-link { /* the buttons in the navbar */
@@ -126,85 +95,75 @@ h6 {
 	font-weight: bold;
 	letter-spacing: 1px;
 	color: #fff;
-}
 
-@media(max-width: 768px) {
-	.nav-link {
+	@media(max-width: 768px) {
 		margin-left: 10px;
 		font-size: 12px;
 	}
 }
 
 .social-buttons {
-	margin-bottom: 0px;
-}
+	margin-bottom: 0;
 
-.social-buttons li a {
-	display: flex;
-	align-items: center; /* center vertically */
-	justify-content: center; /* center horizontally */
-	font-size: 20px;
-	width: 30px;
-	height: 30px;
-	color: #fff;
-	transition: all .3s;
-}
+	& li a {
+		display: flex;
+		align-items: center; /* center vertically */
+		justify-content: center; /* center horizontally */
+		font-size: 20px;
+		width: 30px;
+		height: 30px;
+		color: #fff;
+		transition: all .3s;
 
-ul.social-buttons li a:hover {
-	color: #3cb371;
-}
+		&:hover { color: #3cb371; }
 
-@media(max-width: 768px) {
-	ul.social-buttons li a {
-		width: 25px;
-		height: 25px;
-		font-size: 18px;
-		margin-right: -7px;
+		@media(max-width: 768px) {
+			width: 25px;
+			height: 25px;
+			font-size: 18px;
+			margin-right: -7px;
+		}
 	}
 }
 
-
 /* welcome screen */
 .welcome {
-	height: 100vh; /* This section is adaptively exactly one screenheight tall. Pretty slick. */
-	background: lightgray; /* So if everything but the image loads a visitor can still see something */
-	background-attachment: fixed, fixed; /* alternatively this can "scroll" with the page" */
+	height: 100vh; /* adaptively exactly one screenheight tall */
+	background: lightgray; /* fallback if image hasn't loaded */
+	background-attachment: fixed, fixed;
 	background-image: url('background.jpg'), url('background_light.jpg');
 	background-position: center center, center center;
 	background-size: cover, cover;
 	text-align: center;
-	padding: 35vh 0; /* for vertical centering */
-	color: #fff; /* text color */
-}
+	padding: 35vh 0; /* vertical centering */
+	color: #fff;
 
-.welcome .intro-heading {
-	text-transform: uppercase;
-	font-family: Helvetica, Montserrat, Arial, sans-serif;
-	font-size: 75px;
-	font-weight: 700;
-	line-height: 75px;
-	margin-bottom: 25px;
-}
+	& .intro-heading {
+		text-transform: uppercase;
+		font-family: Helvetica, Montserrat, Arial, sans-serif;
+		font-size: 75px;
+		font-weight: 700;
+		line-height: 75px;
+		margin-bottom: 25px;
 
-.welcome .intro-lead-in {
-	font-family: Caslon,Georgia,Sabon,Garamond;
-	font-size: 40px;
-	font-style: italic;
-	line-height: 40px;
-}
+		@media(max-width: 768px) {
+			font-size: 40px;
+			line-height: 40px;
+		}
+	}
 
-@media(max-width:768px) {
-	.welcome .intro-heading {
+	& .intro-lead-in {
+		font-family: Caslon, Georgia, Sabon, Garamond;
 		font-size: 40px;
+		font-style: italic;
 		line-height: 40px;
-	}
 
-	.welcome .intro-lead-in {
-		font-size: 22px;
-		line-height: 22px;
+		@media(max-width: 768px) {
+			font-size: 22px;
+			line-height: 22px;
+		}
 	}
 }
-
 
 /* galleries */
 .gallery-thumbnail {
@@ -233,157 +192,40 @@ ul.social-buttons li a:hover {
 
 	&:hover img { filter: brightness(0.5); } /* dims image so overlay text is readable */
 	&:hover .tile-overlay { opacity: 1; }
-}
 
-/* shared: both title and overlay are centered layers that fill the tile */
-.tile-title, .tile-overlay {
-	position: absolute;
-	inset: 0;
-	display: flex;
-	align-items: center; /* center vertically */
-	justify-content: center; /* center horizontally */
-	text-align: center; /* center wrapped text within flex items */
-	color: #fff;
-}
+	/* shared: both title and overlay are centered layers that fill the tile */
+	& .tile-title, & .tile-overlay {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		align-items: center; /* center vertically */
+		justify-content: center; /* center horizontally */
+		text-align: center; /* center wrapped text within flex items */
+		color: #fff;
+	}
 
-.tile-title {
-	padding: 15px;
-	font-size: 1.3em;
-	font-weight: 700;
-	font-family: Helvetica, Montserrat, Arial, sans-serif;
-}
+	& .tile-title {
+		padding: 15px;
+		font-size: 1.3em;
+		font-weight: 700;
+		font-family: Helvetica, Montserrat, Arial, sans-serif;
+	}
 
-/* when an image is present, it stacks above (later in DOM) and the title is redundant */
-.has-image .tile-title {
-	opacity: 0;
-}
+	/* when an image is present, it stacks above (later in DOM) and the title is redundant */
+	&.has-image .tile-title { opacity: 0; }
 
-.tile-overlay {
-	flex-direction: column; /* stack title and description vertically */
-	padding: 20px;
-	background: rgba(0, 40, 60, 0.88);
-	opacity: 0; /* hidden by default; revealed on hover */
-	transition: opacity 0.4s ease;
+	& .tile-overlay {
+		flex-direction: column; /* stack title and description vertically */
+		padding: 20px;
+		background: rgba(0, 40, 60, 0.88);
+		opacity: 0; /* hidden by default; revealed on hover */
+		transition: opacity 0.4s ease;
 
-	& h4 { color: #fff; margin-bottom: 10px; } /* override global dark heading color */
-	& p  { font-size: 0.9em; margin-bottom: 0; } /* suppress default paragraph bottom margin */
-}
-
-
-
-.btn:focus,
-.btn:active,
-.btn.active,
-.btn:active:focus {
-	outline: 0;
-}
-
-.portfolio-modal .modal-content {
-	padding: 100px 0;
-	min-height: 100%;
-	border: 0;
-	border-radius: 0;
-	background-clip: border-box;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.portfolio-modal .modal-content h2 {
-	margin-bottom: 15px;
-	font-size: 140%;
-}
-
-.portfolio-modal .modal-content p {
-	margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content p.item-intro {
-	margin: 20px 0 30px;
-	font-family: Caslon, Georgia, Sabon, Garamond, serif;
-	font-size: 100%;
-	font-style: italic;
-}
-
-.portfolio-modal .modal-content {
-	margin-top: 0;
-}
-
-.portfolio-modal .modal-content img {
-	margin-bottom: 30px;
-}
-
-.portfolio-modal .close-modal {
-	position: absolute;
-	top: 25px;
-	right: 25px;
-	width: 75px;
-	height: 75px;
-	background-color: transparent;
-	cursor: pointer;
-}
-
-.portfolio-modal .close-modal:hover {
-	opacity: .3;
-}
-
-.portfolio-modal .close-modal .lr {
-	z-index: 1051;
-	width: 1px;
-	height: 75px;
-	margin-left: 35px;
-	background-color: #222;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.portfolio-modal .close-modal .lr .rl {
-	z-index: 1052;
-	width: 1px;
-	height: 75px;
-	background-color: #222;
-	-webkit-transform: rotate(90deg);
-	-ms-transform: rotate(90deg);
-	transform: rotate(90deg);
-}
-
-
-
-/* stuff I'm not sure I need */
-/* buttons */
-.btn-xl {
-	padding: 20px 40px;
-	font-size: 18px;
-	font-weight: 700;
-}
-
-.btn-sm {
-	padding: 10px 20px;
-	font-size: 14px;
-	font-weight: 700;
-}
-
-.btn-sm, .btn-xl {
-	color: #fff;
-	background-color: #3cb371;
-	border: none;
-	text-transform: uppercase;
-	font-family: Helvetica, Montserrat, Arial, sans-serif;
-}
-
-.btn-sm:hover,
-.btn-sm:focus,
-.btn-sm:active,
-.btn-xl:hover,
-.btn-xl:focus,
-.btn-xl:active,
-.open .dropdown-toggle.btn-xl {
-	border-color: #3cb371;
-	color: #fff;
-	background-color: #6ecf99;
+		& h4 { color: #fff; margin-bottom: 10px; } /* override global dark heading color */
+		& p  { font-size: 0.9em; margin-bottom: 0; } /* suppress default paragraph bottom margin */
+	}
 }
 
 .container img {
 	max-width: 100%;
 }
-
