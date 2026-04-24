@@ -244,3 +244,21 @@ color: #222; /* override green link color inherited from <a> */
 		max-height: 80vh;
 	}
 }
+
+figure {
+	text-align: center;
+	margin: 1.5em auto;
+
+	& img {
+		@media (orientation: landscape) {
+			max-height: 80vh;
+		}
+	}
+
+	& figcaption {
+		font-style: italic;
+		font-size: 0.9em;
+		color: #555;
+		margin-top: 0.5em;
+	}
+}
