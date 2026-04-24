@@ -254,11 +254,4 @@ figure {
 			max-height: 80vh;
 		}
 	}
-
-	& figcaption {
-		font-style: italic;
-		font-size: 0.9em;
-		color: #555;
-		margin-top: 0.5em;
-	}
 }
