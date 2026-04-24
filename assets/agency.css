@@ -138,8 +138,6 @@ h1, h2, h3, h4, h5, h6 {
 
 	@media (max-width: 768px) {
 		background-attachment: scroll, scroll;
-		height: 50vh;
-		padding: 14vh 0;
 	}
 	text-align: center;
 	padding: 35vh 0; /* vertical centering */
