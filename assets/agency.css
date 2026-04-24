@@ -135,6 +135,10 @@ h1, h2, h3, h4, h5, h6 {
 	background-image: url('background.jpg'), url('background_light.jpg');
 	background-position: center center, center center;
 	background-size: cover, cover;
+
+	@media (max-width: 768px) {
+		background-attachment: scroll, scroll;
+	}
 	text-align: center;
 	padding: 35vh 0; /* vertical centering */
 	color: #fff;
