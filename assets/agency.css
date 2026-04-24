@@ -172,6 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* galleries */
 .gallery-thumbnail {
+	container-type: inline-size;
 	position: relative; /* anchor for absolutely-positioned children */
 	margin-top: 20px;
 	width: 100%;
@@ -222,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: clamp(3em, 12vw, 8em);
+		font-size: 30cqw;
 		color: #222; /* override green link color inherited from <a> */
 	}
 
