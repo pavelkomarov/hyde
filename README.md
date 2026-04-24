@@ -28,9 +28,10 @@ Using github pages with Jekyll is an absurdly fragile black box. The server pull
 1. `gh-pages` branches are rendered with Jekyll and end up at `rootdomain.com/reponame`. 
 2. When you add this theme as `remote_theme` in some other repo's `_config.yml`, you're commanding github to go fetch the files in here and use them to render a Jekyll site. That Jekyll program will be specifically looking for `_layouts/page.html` to render the homepage from the `README`, and if no file of that name exists in the theme, the result is indistinguishable from your theme or reference to it being completely broken.
 3. ONLY files in `assets`, `_includes`, `_layouts`, and `_sass` end up in the theme. Folders named other things can be included in a compiled gem version, but that requires tweaks to the `.gemspec`. Not sure whether `remote_theme` is smart enough to read the `.gemspec` and figure out that it should be preserving other files. "When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled. To add a custom directory to your theme-gem, please edit the regexp in `____.gemspec` accordingly." -default README that comes with `jekyll new-theme ____`.
-4. Jekyll outputs pages by default at `/name/index.html`, which is objectively atrocious. `permalink: /name.html` in the "front matter" to avoid this behavior.
-5. Navigating down to the `_site` folder and opening the htmls causes all the relative paths to break, so the pages don't look right. Instead go to `localhost:4000/page.html`.
-6. The `/_layouts` directory can be used to house `html` files peppered with Jekyll's liquid tags which can then be referenced in commonly-structured pages with calls in the "front matter":
+4. Collections must live in `_underscore`-prefixed directories, which Jekyll also excludes from the build by default. It's obnoxious that you have to name collections in a way that would naturally exclude them, then configure specifically to re-include them via the `include:` key in `_config.yml`. There is no good reason for this.
+5. Jekyll outputs pages by default at `/name/index.html`, which is objectively atrocious. `permalink: /name.html` in the "front matter" to avoid this behavior.
+6. Navigating down to the `_site` folder and opening the htmls causes all the relative paths to break, so the pages don't look right. Instead go to `localhost:4000/page.html`.
+7. The `/_layouts` directory can be used to house `html` files peppered with Jekyll's liquid tags which can then be referenced in commonly-structured pages with calls in the "front matter":
 
 ```
 ---
