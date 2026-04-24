@@ -69,7 +69,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
 	font-family: Helvetica, Montserrat, Arial, sans-serif;
 	font-weight: 700; /* 700 is standard bold */
-	color: #00283c;
+	color: #222;
 }
 
 /* navbar */
@@ -219,7 +219,8 @@ h1, h2, h3, h4, h5, h6 {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 6em;
+		font-size: 8em;
+		color: #222; /* override green link color inherited from <a> */
 	}
 
 	/* when image or emoji is present, it stacks above (later in DOM) and the title is redundant */
