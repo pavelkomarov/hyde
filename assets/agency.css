@@ -113,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 		width: 30px;
 		height: 30px;
 		color: #fff;
+		text-decoration: none;
 		transition: all .3s;
 
 		&:hover { color: #3cb371; }
