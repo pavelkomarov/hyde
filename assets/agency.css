@@ -254,4 +254,8 @@ figure {
 			max-height: 80vh;
 		}
 	}
+
+	& figcaption {
+		font-size: 1em;
+	}
 }
