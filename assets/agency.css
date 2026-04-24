@@ -40,7 +40,7 @@ blockquote {
 }
 
 code {
-	color: #3cb371;
+	color: #40c9a2;
 }
 
 p {
@@ -49,7 +49,7 @@ p {
 }
 
 a {
-	color: #3cb371;
+	color: #40c9a2;
 
 	&:hover,
 	&:focus,
@@ -77,12 +77,12 @@ h1, h2, h3, h4, h5, h6 {
 	transition: all .3s;
 	color: #fff;
 
-	&:hover { color: #3cb371; }
+	&:hover { color: #40c9a2; }
 }
 
 .nav {
 	& > a:focus { color: #fff; } /* override default focus color */
-	& > a:hover { color: #3cb371; }
+	& > a:hover { color: #40c9a2; }
 }
 
 .nav-link { /* the buttons in the navbar */
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 		text-decoration: none;
 		transition: all .3s;
 
-		&:hover { color: #3cb371; }
+		&:hover { color: #40c9a2; }
 
 		@media(max-width: 768px) {
 			width: 25px;
@@ -177,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 20px;
 	width: 100%;
 	padding-bottom: 100%; /* makes the container a square regardless of content */
-	background: #3cb371; /* green shows through when there's no image */
+	background: #40c9a2; /* green shows through when there's no image */
 	overflow: hidden; /* clips children (image, overlays) to the rounded corners */
 	border-radius: 4px;
 
