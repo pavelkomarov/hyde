@@ -213,8 +213,17 @@ h1, h2, h3, h4, h5, h6 {
 		font-family: Helvetica, Montserrat, Arial, sans-serif;
 	}
 
-	/* when an image is present, it stacks above (later in DOM) and the title is redundant */
-	&.has-image .tile-title { opacity: 0; }
+	& .tile-emoji {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 5em;
+	}
+
+	/* when image or emoji is present, it stacks above (later in DOM) and the title is redundant */
+	&.has-image .tile-title, &.has-emoji .tile-title { opacity: 0; }
 
 	& .tile-overlay {
 		flex-direction: column; /* stack title and description vertically */
