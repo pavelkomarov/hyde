@@ -11,13 +11,30 @@ and all that other jazz. Doesn't appear on the page, but is essential for search
 	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta property="og:description" content="{{ site.description }}">
 	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="article">
-	<meta property="og:url" content="pavelkomarov.github.io/" >
-	<meta property="og:site_name" content="Pavel's Site">
-	<meta property="og:image" content="/assets/favicon.jpeg">
+	<meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:image" content="{{ site.url }}/assets/my_face.jpg">
 
 	<link rel="icon" type="image/png" href="/assets/favicon.jpeg">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
+	<!-- Structured data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Pavel Komarov",
+		"url": "https://pavelkomarov.com",
+		"image": "https://pavelkomarov.com/assets/my_face.jpg",
+		"sameAs": [
+			"https://github.com/pavelkomarov",
+			"https://www.linkedin.com/in/pkomarov",
+			"https://stackexchange.com/users/2382856/pavel-komarov",
+			"https://arxiv.org/abs/2512.09090"
+		]
+	}
+	</script>
 
 	<!-- Bootstrap 5 css and my custom theme's css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
