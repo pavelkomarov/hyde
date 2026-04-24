@@ -220,6 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 		align-items: center;
 		justify-content: center;
 		font-size: 8em;
+		line-height: 1; /* collapses line box to font-size, fixing vertical centering of text characters */
 		color: #222; /* override green link color inherited from <a> */
 	}
 
