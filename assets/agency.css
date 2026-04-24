@@ -222,8 +222,8 @@ h1, h2, h3, h4, h5, h6 {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 8em;
-color: #222; /* override green link color inherited from <a> */
+		font-size: clamp(3em, 12vw, 8em);
+		color: #222; /* override green link color inherited from <a> */
 	}
 
 	/* when image or emoji is present, it stacks above (later in DOM) and the title is redundant */
